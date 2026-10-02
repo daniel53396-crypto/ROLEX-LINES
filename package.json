@@ -1,0 +1,17 @@
+{
+  "name": "virus-fixa-license-panel",
+  "version": "1.0.0",
+  "description": "License management panel for a browser extension",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.8.1",
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1"
+  }
+}

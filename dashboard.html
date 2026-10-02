@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  >
+
+  <title>VIRUS FIXA Dashboard</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="sidebar">
+
+  <div class="brand">
+    VFX
+  </div>
+
+  <h2>VIRUS FIXA</h2>
+
+  <nav>
+    <a class="active">Dashboard</a>
+    <a href="#generate">Generate License</a>
+    <a href="#licenses">Licenses</a>
+  </nav>
+
+  <button id="logout">
+    LOGOUT
+  </button>
+
+</div>
+
+<main>
+
+  <header>
+    <div>
+      <h1>License Dashboard</h1>
+      <p>Manage your extension licenses</p>
+    </div>
+  </header>
+
+  <section class="stats">
+
+    <div class="stat-card">
+      <span>Total</span>
+      <strong id="total">0</strong>
+    </div>
+
+    <div class="stat-card">
+      <span>Active</span>
+      <strong id="active">0</strong>
+    </div>
+
+    <div class="stat-card">
+      <span>Expired</span>
+      <strong id="expired">0</strong>
+    </div>
+
+    <div class="stat-card">
+      <span>Revoked</span>
+      <strong id="revoked">0</strong>
+    </div>
+
+  </section>
+
+  <section id="generate" class="panel">
+
+    <h2>Generate License</h2>
+
+    <div class="form-grid">
+
+      <input
+        id="customer"
+        placeholder="Customer name"
+      >
+
+      <select id="type">
+        <option value="7d">7 Days</option>
+        <option value="30d">30 Days</option>
+        <option value="90d">90 Days</option>
+        <option value="lifetime">Lifetime</option>
+      </select>
+
+      <input
+        id="maxActivations"
+        type="number"
+        min="1"
+        value="1"
+        placeholder="Max activations"
+      >
+
+      <button id="generate">
+        GENERATE KEY
+      </button>
+
+    </div>
+
+    <div id="generatedKey"></div>
+
+  </section>
+
+  <section id="licenses" class="panel">
+
+    <div class="panel-header">
+      <h2>Licenses</h2>
+
+      <button onclick="loadLicenses()">
+        REFRESH
+      </button>
+    </div>
+
+    <div class="table-wrapper">
+
+      <table>
+
+        <thead>
+          <tr>
+            <th>License</th>
+            <th>Customer</th>
+            <th>Type</th>
+            <th>Expires</th>
+            <th>Activations</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+
+        <tbody id="licenseTable"></tbody>
+
+      </table>
+
+    </div>
+
+  </section>
+
+</main>
+
+<script src="app.js"></script>
+
+</body>
+</html>

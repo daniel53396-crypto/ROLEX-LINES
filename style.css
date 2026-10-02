@@ -1,0 +1,338 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #070910;
+  color: #fff;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* LOGIN */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.glow {
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: .25;
+}
+
+.glow1 {
+  background: #3b5cff;
+  top: -100px;
+  left: -100px;
+}
+
+.glow2 {
+  background: #a020f0;
+  bottom: -100px;
+  right: -100px;
+}
+
+.login-card {
+  position: relative;
+  width: 380px;
+  padding: 45px;
+  border: 1px solid #252b44;
+  border-radius: 22px;
+  background: rgba(12, 15, 28, .92);
+  box-shadow: 0 0 60px rgba(60, 80, 255, .15);
+  text-align: center;
+}
+
+.logo,
+.brand {
+  font-weight: 900;
+  letter-spacing: 4px;
+  color: #7d8cff;
+}
+
+.login-card h1 {
+  margin-bottom: 5px;
+}
+
+.login-card p {
+  color: #7f879f;
+  font-size: 12px;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 14px;
+  border: 1px solid #292f48;
+  border-radius: 10px;
+  background: #0b0e19;
+  color: white;
+  outline: none;
+}
+
+.login-card button,
+.form-grid button {
+  width: 100%;
+  padding: 15px;
+  border: 0;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  background: linear-gradient(
+    90deg,
+    #465fff,
+    #963cff
+  );
+}
+
+#error {
+  color: #ff6b81;
+  margin-top: 15px;
+}
+
+/* DASHBOARD */
+
+.sidebar {
+  position: fixed;
+  width: 240px;
+  height: 100vh;
+  padding: 30px 20px;
+  background: #0b0e18;
+  border-right: 1px solid #1d2337;
+}
+
+.sidebar h2 {
+  font-size: 15px;
+  margin: 20px 0 35px;
+}
+
+nav a {
+  display: block;
+  padding: 13px;
+  margin-bottom: 7px;
+  color: #8d95ad;
+  border-radius: 9px;
+}
+
+nav a.active,
+nav a:hover {
+  background: #171c31;
+  color: white;
+}
+
+#logout {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 30px;
+  padding: 12px;
+  border: 1px solid #30364d;
+  border-radius: 8px;
+  background: transparent;
+  color: #aaa;
+}
+
+main {
+  margin-left: 240px;
+  padding: 40px;
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header p {
+  color: #777f96;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.stat-card,
+.panel {
+  background: #0c101c;
+  border: 1px solid #20263b;
+  border-radius: 16px;
+}
+
+.stat-card {
+  padding: 22px;
+}
+
+.stat-card span {
+  color: #7f879d;
+  font-size: 13px;
+}
+
+.stat-card strong {
+  display: block;
+  font-size: 30px;
+  margin-top: 8px;
+}
+
+.panel {
+  margin-top: 25px;
+  padding: 25px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns:
+    1.5fr 1fr 1fr 1fr;
+  gap: 12px;
+}
+
+.form-grid input,
+.form-grid select {
+  padding: 13px;
+  border-radius: 9px;
+  border: 1px solid #293049;
+  background: #080b14;
+  color: white;
+}
+
+.key-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #35406b;
+  border-radius: 10px;
+  background: #10162a;
+}
+
+.key-box span {
+  color: #858da6;
+  font-size: 11px;
+}
+
+.key-box strong {
+  flex: 1;
+  font-family: monospace;
+  color: #8ea0ff;
+}
+
+.key-box button,
+.panel-header button,
+.danger {
+  padding: 8px 12px;
+  border: 1px solid #303853;
+  border-radius: 7px;
+  background: #151b2d;
+  color: white;
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 14px 10px;
+  border-bottom: 1px solid #20263a;
+}
+
+th {
+  color: #737c94;
+  font-size: 12px;
+}
+
+code {
+  color: #8ea0ff;
+}
+
+.status {
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 11px;
+}
+
+.status.active {
+  background: #103b2b;
+  color: #53e0a2;
+}
+
+.status.expired {
+  background: #3b3210;
+  color: #f2cf63;
+}
+
+.status.revoked {
+  background: #401b25;
+  color: #ff7187;
+}
+
+.danger {
+  color: #ff7288;
+}
+
+@media (max-width: 900px) {
+
+  .sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+
+  #logout {
+    position: static;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  main {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .stats {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
